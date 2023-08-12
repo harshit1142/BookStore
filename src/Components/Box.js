@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Box({title,subTitle,author,date,rating}) {
+export default function Box({title,subTitle,author,date,rating,link}) {
 
   
 
@@ -17,7 +17,8 @@ export default function Box({title,subTitle,author,date,rating}) {
         </div>
         <div className='bottom'>
            {rating>0 && <p>Rating : {rating}/5</p>}
-           <button>💗</button>
+           <button className='btn'>💗Fav</button>
+           <a href={link} target="_blank" rel="noopener noreferrer" > <button className='btn'>Read</button></a>
         </div>
     </div>
   )

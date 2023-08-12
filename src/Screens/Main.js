@@ -21,7 +21,7 @@ export default function Main() {
 
    function handelSearch(e){
     e.preventDefault();
-    setSearch(text);
+    {text==="" ?setSearch(search) :setSearch(text)}
     setText("");
    }
   return (
@@ -43,6 +43,7 @@ export default function Main() {
                 author={ele.volumeInfo.authors[0]}
                 date={ele.volumeInfo.publishedDate}
                 rating={ele.volumeInfo.averageRating}
+                link={ele.volumeInfo.previewLink}
                  key={ele.id}
                 />)
               }            
