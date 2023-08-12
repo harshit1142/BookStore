@@ -1,6 +1,10 @@
 import React from 'react'
 
 export default function Box({title,subTitle,author,date,rating}) {
+
+  
+
+
   return (
     <div className='box'>
         <div className='top'>
@@ -13,6 +17,7 @@ export default function Box({title,subTitle,author,date,rating}) {
         </div>
         <div className='bottom'>
            {rating>0 && <p>Rating : {rating}/5</p>}
+           <button>💗</button>
         </div>
     </div>
   )

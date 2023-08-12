@@ -6,17 +6,23 @@ export default function Main() {
     const [book,setBook]=useState([]);
     const [search,setSearch]=useState("India");
     const [text,setText]=useState("");
+   
 
    useEffect(()=>{
-     fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&download=epub&key=AIzaSyD_d_29Zq6n63LUjWQMIJvVFY2QI7Rwb4E`)
-     .then(res=>res.json())
-     .then(data=>setBook(data))
+    try {
+      fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&download=epub&key=AIzaSyD_d_29Zq6n63LUjWQMIJvVFY2QI7Rwb4E`)
+      .then(res=>res.json())
+      .then(data=> ( setBook(data)))
+    } catch (error) {
+      console.log(error);
+    }
+   
    },[search])
 
-   console.log(book.items);
    function handelSearch(e){
     e.preventDefault();
     setSearch(text);
+    setText("");
    }
   return (
     <div className='container'>
@@ -30,14 +36,16 @@ export default function Main() {
                 </form>
              </div>
              <div className='main'>
-                {book.items && book.items.map(ele=><Box 
+             {Object.keys(book).length===0?<></>:
+             book.items.map(ele=><Box 
                 title={ele.volumeInfo.title}
                 subTitle={ele.volumeInfo.subtitle}
                 author={ele.volumeInfo.authors[0]}
                 date={ele.volumeInfo.publishedDate}
                 rating={ele.volumeInfo.averageRating}
-
-                />)}             
+                 key={ele.id}
+                />)
+              }            
              </div>
     </div>
   )
