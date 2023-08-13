@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
  function DisplayFav({Fav}) {
-
+     
   return (
     <div className='display'>
     <Link  to="/" ><button className='btn btn-back'>◀ Back</button></Link>

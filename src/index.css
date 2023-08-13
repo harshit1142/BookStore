@@ -9,6 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: white;
   padding: 0;
+  padding-left: 3px;
   background-color: rgb(29, 59, 90);;
 }
 
@@ -33,7 +34,7 @@ code {
 }
 
 .box{
-  width: 250px;
+  width: 270px;
   height: auto;
   background-color: rgb(4, 4, 4);
   color: white;
@@ -81,7 +82,7 @@ code {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 70%;
+  width: 60%;
 }
 
 .btn:disabled {
