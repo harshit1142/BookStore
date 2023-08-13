@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import Box from '../Components/Box';
+import { Link } from 'react-router-dom';
 
 export default function Main() {
 
@@ -8,9 +9,9 @@ export default function Main() {
     const [text,setText]=useState("");
    
 
-   useEffect(()=>{
+   useMemo(()=>{
     try {
-      fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&download=epub&key=AIzaSyD_d_29Zq6n63LUjWQMIJvVFY2QI7Rwb4E`)
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&download=epub&key=AIzaSyD_d_29Zq6n63LUjWQMIJvVFY2QI7Rwb4E`)
       .then(res=>res.json())
       .then(data=> ( setBook(data)))
     } catch (error) {
@@ -28,11 +29,13 @@ export default function Main() {
     <div className='container'>
         <div className="head">
             <h1>BookStore🔖</h1>
+
             </div>
             <div className='searchBar'>
                 <form label="text" onSubmit={handelSearch} >
                     <input type="text" value={text} placeholder='Search ' onChange={(e)=>setText(e.target.value)} />
-                    <button type="submit">Search</button>
+                    <button className="btn " type="submit">Search</button>
+             <Link to="/favorite" ><button className='btn btn-back'>💗Favorite</button></Link>
                 </form>
              </div>
              <div className='main'>
@@ -45,6 +48,7 @@ export default function Main() {
                 rating={ele.volumeInfo.averageRating}
                 link={ele.volumeInfo.previewLink}
                  key={ele.id}
+                 ele={ele}
                 />)
               }            
              </div>

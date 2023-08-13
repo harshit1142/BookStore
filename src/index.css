@@ -8,6 +8,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: white;
+  padding: 0;
+  background-color: rgb(29, 59, 90);;
 }
 
 code {
@@ -79,7 +81,7 @@ code {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 50%;
+  width: 70%;
 }
 
 .btn:disabled {
@@ -88,4 +90,32 @@ code {
 
 .btn:focus {
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+.list{
+  width:50%;
+  background-color: rgb(16, 16, 16);
+  color: rgb(200, 160, 245);
+  padding-left: 3px;
+  padding-bottom: 3px;
+  
+}
+
+.display{
+  background-color: rgb(29, 59, 90);
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  max-height: 100%;
+}
+.btn-back{
+  width: 30%;
+  background-color: black;
+}
+input{
+  width: 233px;
+  height: 20px;
+  font-size: 15px;
+  color: black;
+  border: 0 0 0;
 }
