@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# BookStore🔖
+Collection of books to read and add to favorite features.
+
+https://github.com/harshit1142/BookStore/assets/112557145/472ae757-581d-4cf9-a78c-515670a41156
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
