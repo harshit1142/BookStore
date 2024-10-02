@@ -89,7 +89,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-  <a href="https://github.com/harshit1142/BookStore/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=harshit1142/BookStore" max={1000} columns={100} anon={1}/>
-  </a>
-</p>
+
