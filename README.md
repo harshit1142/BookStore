@@ -1,6 +1,6 @@
 # BookStore🔖
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 Collection of books to read and add to favorite features.
 
@@ -81,6 +81,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/PALASH2201"><img src="https://avatars.githubusercontent.com/u/129573364?v=4?s=100" width="100px;" alt="PALASH2201"/><br /><sub><b>PALASH2201</b></sub></a><br /><a href="https://github.com/harshit1142/BookStore/commits?author=PALASH2201" title="Code">💻</a> <a href="#design-PALASH2201" title="Design">🎨</a> <a href="#ideas-PALASH2201" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/harshit1142"><img src="https://avatars.githubusercontent.com/u/112557145?v=4?s=100" width="100px;" alt="Harshit Pandey"/><br /><sub><b>Harshit Pandey</b></sub></a><br /><a href="#design-harshit1142" title="Design">🎨</a> <a href="https://github.com/harshit1142/BookStore/commits?author=harshit1142" title="Code">💻</a> <a href="https://github.com/harshit1142/BookStore/issues?q=author%3Aharshit1142" title="Bug reports">🐛</a> <a href="#content-harshit1142" title="Content">🖋</a> <a href="#data-harshit1142" title="Data">🔣</a> <a href="#projectManagement-harshit1142" title="Project Management">📆</a> <a href="https://github.com/harshit1142/BookStore/pulls?q=is%3Apr+reviewed-by%3Aharshit1142" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
 </table>
