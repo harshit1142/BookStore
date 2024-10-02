@@ -1,64 +1,143 @@
-# BookStore🔖
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-Collection of books to read and add to favorite features.
+<div align="center">
 
-[Project-Live](https://bookstore-ochre-psi.vercel.app/)
+<div align="center">
 
-https://github.com/harshit1142/BookStore/assets/112557145/472ae757-581d-4cf9-a78c-515670a41156
+# <p>BookStore</p>
 
+<i><p>Your one-stop shop for all kinds of books!</p></i>
 
-## Installation
+</div>
 
-To get started with the project, follow these steps:
+<table align="center">
+    <thead align="center">
+        <tr border: 1px;>
+            <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Star.png" width="20" height="20"> Stars</b></td>
+            <td><b>🍴 Forks</b></td>
+            <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Lady%20Beetle.png" width="20" height="20"> Issues</b></td>
+            <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Check%20Mark%20Button.png" width="20" height="20"> Open PRs</b></td>
+            <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Cross%20Mark.png" width="20" height="20"> Closed PRs</b></td>
+        </tr>
+     </thead>
+    <tbody>
+         <tr>
+            <td><img alt="Stars" src="https://img.shields.io/github/stars/harshit1142/BookStore?style=flat&logo=github"/></td>
+             <td><img alt="Forks" src="https://img.shields.io/github/forks/harshit1142/BookStore?style=flat&logo=github"/></td>
+            <td><img alt="Issues" src="https://img.shields.io/github/issues/harshit1142/BookStore?style=flat&logo=github"/></td>
+            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/harshit1142/BookStore?style=flat&logo=github"/></td>
+           <td><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/harshit1142/BookStore?style=flat&color=critical&logo=github"/></td>
+        </tr>
+    </tbody>
+</table>
+</div>
 
-1. **Clone the repository:**
-   First, clone the repository to your local machine using the following command:
+<h3> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="40" height="40" />Featured In</h3>
+
+<h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Writing%20Hand%20Light%20Skin%20Tone.png" alt="Rocket" width="40" height="40" />Project Overview</h3>
+<p style="font-family:var(--ff-philosopher);">
+The BookStore is an online platform that allows you to browse, purchase, and review a wide variety of books.</p>
+
+## <p style="font-family:var(--ff-philosopher);font-size:3rem;text-align:center;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/High%20Voltage.png" alt="High Voltage" width="40" height="40" />Tech Stack</p>
+<center>
+<a href="https://react.dev/"><img src="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge"></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black"></a>
+<a href="https://react-redux.js.org/"><img src="https://img.shields.io/badge/redux-764ABC?style=for-the-badge&logo=redux&logoColor=white"></a>
+<a href="https://getbootstrap.com/"><img src="https://img.shields.io/badge/Bootstrap-7952B3.svg?style=for-the-badge&logo=Bootstrap&logoColor=black"></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=black"></a>
+</center>
+
+<br><br>
+
+## <p style="font-size:3rem;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="40" height="40" />Get Started</p>
+
+### Setup and Installation
+
+<p style="font-family:var(--ff-philosopher);">To contribute to the BookStore repository, follow these steps:</p>
+
+1. **Fork the Repository:**
+   Click on the "Fork" button on the repository's GitHub page to create a copy of the repository in your GitHub account.
+
+2. **Clone the repository:**
+   Clone the forked repository to your local machine using the following command in your terminal.
    ```bash
-   git clone https://github.com/harshit1142/BookStore.git
+   git clone https://github.com/<your-github-username>/BookStore
    ```
 
-2. **Navigate to the project directory:**
+3. **Navigate to the project directory:**
    Change your current directory to the project directory:
    ```bash
    cd BookStore
    ```
 
-3. **Install the dependencies:**
+4. **Install the dependencies:**
    Install all the required dependencies using npm:
    ```bash
    npm install
    ```
    This command will read the `package.json` file and install all the listed dependencies.
 
-4. **Start the development server:**
+5. **Start the development server:**
    Once the dependencies are installed, you can start the development server:
    ```bash
    npm start
    ```
    This will start the application in development mode and open it in your default web browser. The app will be available at [http://localhost:3000](http://localhost:3000).
 
-5. **Build the project for production:**
+6. **Build the project for production:**
    To create an optimized production build of the application, run:
    ```bash
    npm run build
    ```
    This will create a `build` folder containing the production-ready files.
 
-6. **Run tests:**
+7. **Run tests:**
    To run the tests for the application, use:
    ```bash
    npm test
    ```
    This will launch the test runner in interactive watch mode.
 
-7. **Eject the configuration (optional):**
+8. **Eject the configuration (optional):**
    If you need to customize the configuration, you can eject it by running:
    ```bash
    npm run eject
    ```
    **Note:** This is a one-way operation. Once you eject, you can't go back!
+
+9. **Add a remote upstream:**
+   ```bash
+   git remote add upstream https://github.com/original-owner-username/BookStore
+   ```
+
+10. **Create a new branch:**
+   Create a new branch for your changes. Run the following command in your terminal.
+   ```bash
+   git checkout -b <your-branch-name>
+   ```
+
+11. **Make the desired changes:**
+   Make the desired changes to the source code.
+
+12. **Add your changes:**
+   Add your changes to the staging area. Run the following command in your terminal.
+   ```bash
+   git add <File1 changed> <File2 changed> ...
+   ```
+
+13. **Commit your changes:**
+   Commit your changes with a meaningful commit message. Run the following command in your terminal.
+   ```bash
+   git commit -m "<your-commit-message>"
+   ```
+
+14. **Push your changes:**
+   Push your changes to your forked repository. Run the following command in your terminal
+   ```bash
+   git push origin <your-branch-name>
+   ```
+
+15. **Create a Pull Request:**
+   Go to the GitHub page of your forked repository. You should see a prompt to create a pull request (PR). Click on it, compare the changes, and create the PR.
+<br><br>
 
 ## License
 
@@ -86,8 +165,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   </tbody>
 </table>
 
+<center>
+<h3 style="font-size:2rem;">
+If you find this project helpful, please consider giving it a star! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Star.png" width="30" height="30"></p>
+</center>
+
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
