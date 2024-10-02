@@ -1,33 +1,52 @@
-import React from 'react'
-import { connect } from 'react-redux';
-import List from './List';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { connect } from "react-redux";
+import List from "./List";
+import { useNavigate } from "react-router-dom";
+import styles from "./favbook.module.css";
+import { ArrowLeft} from "lucide-react";
 
-
- function DisplayFav({Fav}) {
-     
+function DisplayFav({ Fav }) {
+  const navigate = useNavigate();
   return (
-    <div className='display'>
-    <Link  to="/" ><button className='btn btn-back'>◀ Back</button></Link>
-    <h1>Favorite Books💗</h1>
-        <ol>
-            {Fav.length!==0 ? Fav.map((ele)=>
-            <li><List  title={ele.volumeInfo.title}
-                author={ele.volumeInfo.authors[0]}
-                link={ele.volumeInfo.previewLink}
-                ele={ele}
-                 key={ele.id}/></li>
-            ):<p>List is empty</p>}
-        </ol>
-    </div>
-  )
+    <>
+      <div className={styles.container}>
+        <header className={styles.header}>
+          <button className={styles.backButton} onClick={() => navigate("/")}>
+            <ArrowLeft size={20} />
+            <span className="sr-only">Back</span>
+          </button>
+          <h1 className={styles.title}>
+            Favorite Books
+            <span role="img" aria-label="heart" className={styles.heartIcon}>
+              ❤️
+            </span>
+          </h1>
+        </header>
+        <main className={styles.main}>
+          <ul className={styles.bookList}>
+            {Fav.length !== 0 ? (
+              Fav.map((ele) => (
+                <List
+                  title={ele.volumeInfo.title}
+                  author={ele.volumeInfo.authors[0]}
+                  link={ele.volumeInfo.previewLink}
+                  ele={ele}
+                  key={ele.id}
+                />
+              ))
+            ) : (
+                <p style={{fontSize: "1.5rem",color:"#ffffff"}}>List is empty</p>
+            )}
+          </ul>
+        </main>
+      </div>
+    </>
+  );
 }
 
+const mapStateToProps = (state) => {
+  return { Fav: state.Fav };
+};
+const mapDispatchToProps = (dispatch) => ({});
 
-const mapStateToProps=(state)=>{
-
-    return {Fav:state.Fav}
-}
-const mapDispatchToProps=(dispatch)=>({})
-
-export default connect(mapStateToProps,mapDispatchToProps) (DisplayFav)
+export default connect(mapStateToProps, mapDispatchToProps)(DisplayFav);

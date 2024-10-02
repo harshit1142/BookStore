@@ -1,0 +1,150 @@
+.container {
+    background-color:rgb(29, 59, 90);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .header {
+    background-color: #1e3a8a;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .backButton {
+    width: fit-content;
+    height: fit-content;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 1rem;
+    padding: 10px 25px;
+    border-width: 0;
+    font-size: 100%;
+    line-height: 1.15;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+    margin: 12px 0 0;
+    transition: background-color 0.2s;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #405cf5;
+    border-radius: 6px; 
+  }
+  
+  .backButton:hover {
+    background-color: rgba(48, 158, 237, 0.803);
+  }
+  
+  .title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .heartIcon {
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .main {
+    flex-grow: 1;
+    padding: 2rem;
+  }
+  
+  .bookList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .bookItem {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .bookInfo {
+    flex-grow: 1;
+  }
+  
+  .bookTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0 0 0.5rem 0;
+    color: #1e3a8a;
+  }
+  
+  .bookAuthor {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin: 0;
+  }
+  
+  .bookActions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .readButton,
+  .removeButton {
+    width: fit-content;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s;
+  }
+  
+  .readButton {
+    background-color: #3b82f6;
+    color: #ffffff;
+  }
+  
+  .readButton:hover {
+    background-color: #2563eb;
+  }
+  
+  .removeButton {
+    background-color: #f0f4f8;
+    color: #ef4444;
+  }
+  
+  .removeButton:hover {
+    background-color: #fee2e2;
+  }
+  
+  @media (min-width: 640px) {
+    .bookList {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  
+    .bookItem {
+      flex-direction: row;
+    }
+  
+    .bookActions {
+      flex-direction: column;
+    }
+  }
