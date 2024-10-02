@@ -1,0 +1,122 @@
+.container {
+    background-color: #f0f4f8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(29, 59, 90);
+  }
+  
+  .header {
+    background-color: #1e3a8a;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tagIcon {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+  }
+  
+  .searchContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .searchInput {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 0.375rem 0.375rem 0.375rem 0.375rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .searchInput:focus {
+    border-color: #3b82f6;
+  }
+  
+  .searchButton {
+    width: fit-content;
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.375rem 0.375rem 0.375rem 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top:0px ;
+  }
+  
+  .searchButton:hover {
+    background-color: #2563eb;
+  }
+  
+  .favoriteButton {
+    width: fit-content;
+    background-color: #f0f4f8;
+    color: #1e3a8a;
+    border: 2px solid #1e3a8a;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .favoriteButton:hover {
+    background-color: #1e3a8a;
+    color: #ffffff;
+  }
+  
+  @media (max-width: 640px) {
+    .main {
+      padding: 1rem;
+    }
+  
+    .searchContainer {
+      flex-direction: column;
+    }
+  
+    .searchInput,
+    .searchButton {
+      width: fit-content;
+      border-radius: 0.375rem;
+    }
+  
+    .searchButton {
+      margin-top: 0.5rem;
+    }
+  }

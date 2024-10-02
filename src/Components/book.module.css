@@ -1,0 +1,121 @@
+.container {
+    background-color: #1a1a2e;
+    min-height: 100vh;
+    padding: 2rem;
+    color: #e0e0e0;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #16213e;
+    background: #e94560;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .bookGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .bookCard {
+    background-color: #16213e;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px; /* Ensure a consistent minimum width */
+    max-width: 350px; /* Optional: Set a maximum width */
+  }
+  
+  .bookCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(233, 69, 96, 0.2);
+  }
+  
+  .bookInfo {
+    padding: 1.5rem;
+    flex-grow: 1;
+  }
+  
+  .title {
+    font-size: 1.4rem;
+    margin: 0 0 0.5rem 0;
+    color: #e94560;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+    color: #9da1a5;
+  }
+  
+  .author {
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+    color: #e0e0e0;
+  }
+  
+  .year {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  
+  .ratingText {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    margin-right: 0.5rem;
+  }
+  
+  .ratingValue {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #e94560;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    gap: 10px;
+    padding: 1rem;
+    background-color: #0f3460;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button {
+    width: fit-content;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #e0e0e0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .favButton:hover {
+    background-color: #e94560;
+  }
+  
+  .readButton:hover {
+    background-color: #533483;
+  }
+  
+  .buttonIcon {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
