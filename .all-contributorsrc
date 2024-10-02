@@ -1,0 +1,28 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "PALASH2201",
+      "name": "PALASH2201",
+      "avatar_url": "https://avatars.githubusercontent.com/u/129573364?v=4",
+      "profile": "https://github.com/PALASH2201",
+      "contributions": [
+        "code",
+        "design",
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "BookStore",
+  "projectOwner": "harshit1142"
+}
