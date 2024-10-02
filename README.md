@@ -2,7 +2,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-Collection of books to read and add to favorite features.
+Collection of books to read and add to favorite features
 
 [Project-Live](https://bookstore-ochre-psi.vercel.app/)
 
