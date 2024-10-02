@@ -17,6 +17,21 @@
         "design",
         "ideas"
       ]
+    },
+    {
+      "login": "harshit1142",
+      "name": "Harshit Pandey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/112557145?v=4",
+      "profile": "https://github.com/harshit1142",
+      "contributions": [
+        "design",
+        "code",
+        "bug",
+        "content",
+        "data",
+        "projectManagement",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
