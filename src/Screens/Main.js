@@ -76,18 +76,23 @@ export default function Main() {
             />
           ))
         )}
-        {bookStore.map((ele)=>(
-          <Book
-            title={ele.title}
-            subTitle={ele.subtitle}
-            author={ele.authors && ele.authors[0]}
-            date={ele.publishedDate}
-            rating={ele.averageRating}
-            link={ele.previewLink}
-            key={ele.id}
-            ele={ele}
-          />
-        ))}
+      </div>
+      <div className="fav">
+        <h1 className="txt-d"> Contributed Books </h1>
+        <div className="main ">
+          {bookStore.map((ele) => (
+            <Book
+              title={ele.title}
+              subTitle={ele.subtitle}
+              author={ele.authors && ele.authors[0]}
+              date={ele.publishedDate}
+              rating={ele.averageRating}
+              link={ele.previewLink}
+              key={ele.id}
+              ele={ele}
+            />
+          ))}
+        </div>
       </div>
       </div>
     </>

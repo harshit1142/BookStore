@@ -33,3 +33,12 @@ code {
   justify-items: center; 
 }
 
+
+.txt-d{
+  font-family: 'Playfair Display', sans-serif;
+  text-align: center;
+}
+
+.fav{
+  background-color: rgb(8, 36, 63);
+}
