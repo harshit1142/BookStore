@@ -82,60 +82,39 @@ The BookStore is an online platform that allows you to browse, purchase, and rev
    ```
    This will start the application in development mode and open it in your default web browser. The app will be available at [http://localhost:3000](http://localhost:3000).
 
-6. **Build the project for production:**
-   To create an optimized production build of the application, run:
-   ```bash
-   npm run build
-   ```
-   This will create a `build` folder containing the production-ready files.
-
-7. **Run tests:**
-   To run the tests for the application, use:
-   ```bash
-   npm test
-   ```
-   This will launch the test runner in interactive watch mode.
-
-8. **Eject the configuration (optional):**
-   If you need to customize the configuration, you can eject it by running:
-   ```bash
-   npm run eject
-   ```
-   **Note:** This is a one-way operation. Once you eject, you can't go back!
-
-9. **Add a remote upstream:**
+6. **Add a remote upstream:**
    ```bash
    git remote add upstream https://github.com/original-owner-username/BookStore
    ```
 
-10. **Create a new branch:**
+7. **Create a new branch:**
    Create a new branch for your changes. Run the following command in your terminal.
    ```bash
    git checkout -b <your-branch-name>
    ```
 
-11. **Make the desired changes:**
+8. **Make the desired changes:**
    Make the desired changes to the source code.
 
-12. **Add your changes:**
+9. **Add your changes:**
    Add your changes to the staging area. Run the following command in your terminal.
    ```bash
    git add <File1 changed> <File2 changed> ...
    ```
 
-13. **Commit your changes:**
+10. **Commit your changes:**
    Commit your changes with a meaningful commit message. Run the following command in your terminal.
    ```bash
    git commit -m "<your-commit-message>"
    ```
 
-14. **Push your changes:**
+11. **Push your changes:**
    Push your changes to your forked repository. Run the following command in your terminal
    ```bash
    git push origin <your-branch-name>
    ```
 
-15. **Create a Pull Request:**
+12. **Create a Pull Request:**
    Go to the GitHub page of your forked repository. You should see a prompt to create a pull request (PR). Click on it, compare the changes, and create the PR.
 <br><br>
 
