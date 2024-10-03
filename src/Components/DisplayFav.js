@@ -26,13 +26,21 @@ function DisplayFav({ Fav }) {
           <ul className={styles.bookList}>
             {Fav.length !== 0 ? (
               Fav.map((ele) => (
-                <List
+                 ele?.volumeInfo ?
+                (<List
                   title={ele.volumeInfo.title}
                   author={ele.volumeInfo.authors[0]}
                   link={ele.volumeInfo.previewLink}
                   ele={ele}
                   key={ele.id}
-                />
+                />) :
+                 ( <List
+                    title={ele.title}
+                    author={ele.authors[0]}
+                    link={ele.previewLink}
+                    ele={ele}
+                    key={ele.id}
+                  />)
               ))
             ) : (
                 <p style={{fontSize: "1.5rem",color:"#ffffff"}}>List is empty</p>

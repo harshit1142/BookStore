@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styles from "./BookStore.module.css";
 import { Search, Heart } from "lucide-react";
 import Loading from "../Components/LoadingSpinner";
+import bookStore from '../bookStore'
 
 export default function Main() {
   const [book, setBook] = useState([]);
@@ -75,6 +76,18 @@ export default function Main() {
             />
           ))
         )}
+        {bookStore.map((ele)=>(
+          <Book
+            title={ele.title}
+            subTitle={ele.subtitle}
+            author={ele.authors[0]}
+            date={ele.publishedDate}
+            rating={ele.averageRating}
+            link={ele.previewLink}
+            key={ele.id}
+            ele={ele}
+          />
+        ))}
       </div>
       </div>
     </>
