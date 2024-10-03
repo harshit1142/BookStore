@@ -71,4 +71,13 @@ export default [
           averageRating:"4.4",
           previewLink:"https://openlibrary.org/books/OL2407753M/Fear_no_evil"
       },
+      {
+          id:"9",
+          title:"History of My Life",
+          subTitle:"",
+          authors: ["Giacomo Casanova"],
+          publishedDate:"February 6, 2007",
+          averageRating:"3.3",
+          previewLink:"https://openlibrary.org/works/OL1156251W/M%C3%A9moires"
+      },
 ]
