@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  font-family: Playfair Display,-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: Playfair Display, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,33 +10,39 @@ body {
   color: white;
   padding: 0;
   padding-left: 3px;
-  background-color: rgb(29, 59, 90);;
+  background-color: rgb(29, 59, 90);
+  ;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.container{
+
+.container {
   width: 100%;
   height: 100%;
   background-color: rgb(29, 59, 90);
   display: flex;
   flex-direction: column;
 }
-.head{
-  display: flex;
-  justify-content: center;
-}
-.searchBar{
+
+.head {
   display: flex;
   justify-content: center;
 }
 
-.box{
+.searchBar {
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.box {
   width: 270px;
   height: auto;
-  background-color: rgb(4, 4, 4);
+  background-color: #00040e;
   color: white;
   display: flex;
   flex-direction: column;
@@ -44,33 +50,35 @@ code {
   padding: 3px;
 }
 
-.main{
+.main {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  margin: 5% 0;
+  ;
 }
 
 
 
 
 /* CSS */
-.btn ,button {
+.btn,
+button {
   appearance: button;
   backface-visibility: hidden;
   background-color: #405cf5;
   border-radius: 6px;
   border-width: 0;
-  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
   font-size: 100%;
   height: 44px;
   line-height: 1.15;
-  margin: 12px 0 0;
   outline: none;
   overflow: hidden;
   padding: 0 25px;
@@ -78,11 +86,11 @@ code {
   text-align: center;
   text-transform: none;
   transform: translateZ(0);
-  transition: all .2s,box-shadow .08s ease-in;
+  transition: all .2s, box-shadow .08s ease-in;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 60%;
+  width: 22%;
 }
 
 .btn:disabled {
@@ -93,30 +101,112 @@ code {
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
 }
 
-.list{
-  width:50%;
+
+
+.list {
+  width: 50%;
   background-color: rgb(16, 16, 16);
   color: rgb(200, 160, 245);
-  padding-left: 3px;
+  padding-left: 10px;
   padding-bottom: 3px;
-  
+  border-radius: 10px;
+
 }
 
-.display{
+.display {
   background-color: rgb(29, 59, 90);
   width: 100%;
   height: 100%;
   min-height: 100vh;
   max-height: 100%;
+
 }
-.btn-back{
-  width: 30%;
+
+.fav-heading {
+  margin-left: 3%;
+}
+
+.btn-back {
+  width: 20%;
   background-color: black;
+
+
+
 }
-input{
-  width: 233px;
+
+input {
+  width: 60%;
   height: 20px;
   font-size: 15px;
   color: black;
   border: 0 0 0;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  width: 100vh;
+
+}
+
+.inputsearch {
+  padding: 9px 9px;
+  border-radius: 10px;
+}
+
+.mainbtns {
+  display: flex;
+  vertical-align: baseline;
+}
+
+
+.searchbtn {
+  width: 38%;
+
+}
+
+.favbtn {
+  width: 100%;
+
+}
+
+/* box div  */
+.box {
+  border-radius: 10px;
+  width: 100%;
+
+
+}
+
+.top {
+  margin: 0 auto;
+  padding: 10px;
+
+}
+
+.middle {
+
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.author {
+  width: 60%;
+}
+
+.date {
+  word-wrap: nowrap;
+}
+
+.boxbuttons {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.boxbuttons a.btn {
+  text-decoration: none;
+  display: inline-block;
+
 }
