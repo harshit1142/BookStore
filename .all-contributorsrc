@@ -41,6 +41,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Kamp7",
+      "name": "Kamleshwar Pandey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/173179515?v=4",
+      "profile": "https://github.com/Kamp7",
+      "contributions": [
+        "code",
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
