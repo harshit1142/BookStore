@@ -35,4 +35,13 @@ export default [
           averageRating:"3.9",
           previewLink:"https://openlibrary.org/works/OL2321336W/Earth_abides"
       },
+      {
+       id:"5",
+        title:"Fear no evil",
+          subTitle:"",
+          authors: ["Anatoly Shcharansky"],
+          publishedDate:"January 1, 1988",
+          averageRating:"4.4",
+          previewLink:"https://openlibrary.org/books/OL2407753M/Fear_no_evil"
+      },
 ]
