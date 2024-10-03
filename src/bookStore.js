@@ -44,7 +44,7 @@ export default [
         averageRating:"5.0",
         previewLink:"https://archive.org/details/vedic-mathematics-bharati-krishna-tirth-ji-maharaj"
     },
-
+     { 
       id:"6",
       title:"Eat that frog!",
         subTitle:"",
@@ -62,5 +62,13 @@ export default [
           averageRating:"3.9",
           previewLink:"https://openlibrary.org/works/OL2321336W/Earth_abides"
       },
-
+      {
+       id:"8",
+        title:"Fear no evil",
+          subTitle:"",
+          authors: ["Anatoly Shcharansky"],
+          publishedDate:"January 1, 1988",
+          averageRating:"4.4",
+          previewLink:"https://openlibrary.org/books/OL2407753M/Fear_no_evil"
+      },
 ]
