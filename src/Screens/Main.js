@@ -63,14 +63,14 @@ export default function Main() {
         {Object.keys(book).length === 0 ? (
           <Loading/>
         ) : (
-          book.items.map((ele) => (
+          book.items && book.items.map((ele) => (
             <Book
-              title={ele.volumeInfo.title}
-              subTitle={ele.volumeInfo.subtitle}
-              author={ele.volumeInfo.authors[0]}
-              date={ele.volumeInfo.publishedDate}
-              rating={ele.volumeInfo.averageRating}
-              link={ele.volumeInfo.previewLink}
+              title={ele.volumeInfo?.title}
+              subTitle={ele.volumeInfo?.subtitle}
+              author={ele.volumeInfo?.authors && ele.volumeInfo.authors[0]}
+              date={ele.volumeInfo?.publishedDate}
+              rating={ele.volumeInfo?.averageRating}
+              link={ele.volumeInfo?.previewLink}
               key={ele.id}
               ele={ele}
             />
@@ -80,7 +80,7 @@ export default function Main() {
           <Book
             title={ele.title}
             subTitle={ele.subtitle}
-            author={ele.authors[0]}
+            author={ele.authors && ele.authors[0]}
             date={ele.publishedDate}
             rating={ele.averageRating}
             link={ele.previewLink}
