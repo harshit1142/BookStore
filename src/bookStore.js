@@ -26,4 +26,13 @@ export default [
         averageRating:"3.9",
         previewLink:"https://openlibrary.org/works/OL2392324W/Eat_That_Frog%21_21_Great_Ways_to_Stop_Procrastinating_and_Get_More_Done_in_Less_Time"
     },
+    {
+        id:"4",
+        title:"Earth abides",
+          subTitle:"",
+          authors: ["George Rippey Stewart"],
+          publishedDate:"January 1, 1949",
+          averageRating:"3.9",
+          previewLink:"https://openlibrary.org/works/OL2321336W/Earth_abides"
+      },
 ]
