@@ -17,7 +17,7 @@ export default function Main() {
         `https://www.googleapis.com/books/v1/volumes?q=${search}&download=epub&key=AIzaSyD_d_29Zq6n63LUjWQMIJvVFY2QI7Rwb4E`
       )
         .then((res) => res.json())
-        .then((data) => setBook(data));
+        .then((data) => {console.log(data); setBook(data);})
     } catch (error) {
       console.log(error);
     }
@@ -73,6 +73,7 @@ export default function Main() {
               link={ele.volumeInfo?.previewLink}
               key={ele.id}
               ele={ele}
+              thumb={ele.volumeInfo.imageLinks.thumbnail}
             />
           ))
         )}
@@ -90,6 +91,7 @@ export default function Main() {
               link={ele.previewLink}
               key={ele.id}
               ele={ele}
+              thumb={ele.thumnail}
             />
           ))}
         </div>
