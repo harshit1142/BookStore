@@ -1,121 +1,136 @@
-.container {
-    background-color: #1a1a2e;
-    min-height: 100vh;
-    padding: 2rem;
-    color: #e0e0e0;
-  }
-  
-  .heading {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #16213e;
-    background: #e94560;
-    padding: 1rem;
-    border-radius: 8px;
-  }
-  
-  .bookGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-  
-  .bookCard {
-    background-color: #16213e;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    min-width: 300px; /* Ensure a consistent minimum width */
-    max-width: 350px; /* Optional: Set a maximum width */
-  }
-  
-  .bookCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(233, 69, 96, 0.2);
-  }
-  
-  .bookInfo {
-    padding: 1.5rem;
-    flex-grow: 1;
-  }
-  
-  .title {
-    font-size: 1.4rem;
-    margin: 0 0 0.5rem 0;
-    color: #e94560;
-  }
-  
-  .subtitle {
-    font-size: 1rem;
-    margin: 0 0 1rem 0;
-    color: #9da1a5;
-  }
-  
-  .author {
-    font-size: 1rem;
-    margin: 0 0 0.5rem 0;
-    color: #e0e0e0;
-  }
-  
-  .year {
-    font-size: 0.9rem;
-    color: #a0a0a0;
-  }
-  
-  .rating {
-    display: flex;
-    align-items: center;
-    margin-top: 0.5rem;
-  }
-  
-  .ratingText {
-    font-size: 0.9rem;
-    color: #a0a0a0;
-    margin-right: 0.5rem;
-  }
-  
-  .ratingValue {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #e94560;
-  }
-  
-  .buttonContainer {
-    display: flex;
-    gap: 10px;
-    padding: 1rem;
-    background-color: #0f3460;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .button {
-    width: fit-content;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 6px;
-    background-color: transparent;
-    color: #e0e0e0;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .favButton:hover {
-    background-color: #e94560;
-  }
-  
-  .readButton:hover {
-    background-color: #533483;
-  }
-  
-  .buttonIcon {
-    margin-right: 0.5rem;
-    font-size: 1.2rem;
-  }
+.bookCard {
+  background-color: #16213e;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  width: 300px;
+  position: relative;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.bookImg {
+  height: 60%;
+  width: 100%;
+  object-fit: cover; /* Ensures the image covers the designated area */
+  transition: filter 0.3s ease; /* Smooth transition when hovering */
+}
+
+.bookInfo {
+  padding: 1rem;
+  background-color: #16213e;
+  text-align: left;
+  z-index: 1;
+  flex-grow: 1;
+  transition: filter 0.3s ease;
+}
+
+.bookCard:hover .bookImg,
+.bookCard:hover .bookInfo {
+  filter: blur(3px); /* Blur the image and the info section on hover */
+}
+
+.bookCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(233, 69, 96, 0.2);
+}
+
+/* Title styling - Center the title */
+.title {
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem 0;
+  color: #e94560;
+  font-weight: bold;
+  text-align: center; /* Centers the title */
+}
+
+/* Rest of the information positioning */
+.author {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-top: 0.5rem;
+  text-align: right; /* Author on the right */
+}
+
+.bookDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.ratingText {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  margin-right: 0.5rem;
+}
+
+.ratingValue {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e94560;
+}
+
+/* Buttons section */
+.buttonContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2; /* Ensure buttons appear above everything else */
+}
+
+.bookCard:hover .buttonContainer {
+  opacity: 1;
+}
+
+.button {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #e94560;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3; /* Buttons are on top, not blurred */
+}
+
+.favButton {
+  background-color: #e94560;
+}
+
+.readButton {
+  background-color: #533483;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  background-color: #ffffff;
+  color: #e94560;
+}
+
+.buttonIcon {
+  margin-right: 0.5rem;
+  font-size: 1.4rem;
+}
