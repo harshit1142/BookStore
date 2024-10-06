@@ -1,31 +1,46 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import Book from "../Components/Book";
 import { Link } from "react-router-dom";
 import styles from "./BookStore.module.css";
-import { Search, Heart, XCircle } from "lucide-react";
+import { Search, Heart, Sun, Moon, XCircle } from "lucide-react";
 import Loading from "../Components/LoadingSpinner";
 import bookStore from "../bookStore";
+import BookSkeleton from "../Components/skeletons/BookSkeleton";
 import { useDebounce } from "use-debounce";
 
 export default function Main() {
   const [book, setBook] = useState([]);
-  ///const [search, setSearch] = useState("India");
-  const [serachText, setSearchText] = useState("");
-  const [debouncedText] = useDebounce(serachText, 200); // Debouncing with a 200ms delay, [adjustable based on requiremens]
+  const [searchText, setSearchText] = useState("");
+  const [debouncedText] = useDebounce(searchText, 200); // Debouncing with a 200ms delay
+  const [darkMode, setDarkMode] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Use localStorage to persist dark mode setting across sessions
+  useEffect(() => {
+    const savedDarkMode = localStorage.getItem("darkMode");
+    setDarkMode(savedDarkMode === "true");
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", darkMode);
+  }, [darkMode]);
+
+  // Fetch books from API based on search text
   useMemo(() => {
-    const query = debouncedText.trim() === "" ? "India" : debouncedText; // If the search query is empty, don't fetch
-    try {
-      fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${query}&download=epub&key=AIzaSyD_d_29Zq6n63LUjWQMIJvVFY2QI7Rwb4E`
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-          setBook(data);
-        });
-    } catch (error) {
-      console.log(error);
-    }
+    const query = debouncedText.trim() === "" ? "India" : debouncedText;  // Default search term
+    setIsLoading(true); // Set loading state before fetching
+    fetch(
+      `https://www.googleapis.com/books/v1/volumes?q=${query}&download=epub&key=AIzaSyD_d_29Zq6n63LUjWQMIJvVFY2QI7Rwb4E`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setBook(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error(error);
+        setIsLoading(false);
+      });
   }, [debouncedText]);
 
   // Function to clear the input when the cross icon is clicked
@@ -33,15 +48,28 @@ export default function Main() {
     setSearchText(""); // Clears the search text
   };
 
+  // Toggle dark mode on and off
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode);
+  };
+
   return (
     <>
-      <div className={styles.container}>
+      <div className={`${styles.container} ${darkMode ? styles.dark : ""}`}>
         <header className={styles.header}>
-          <h1 className={styles.logo}>
-            BookStore
-            <span className={styles.tagIcon}>🔖</span>
-          </h1>
+          <div>
+            <h1 className={styles.logo}>
+              BookStore
+              <span className={styles.tagIcon}>🔖</span>
+            </h1>
+          </div>
+          <div>
+            <button className={styles.darkModeButton} onClick={toggleDarkMode}>
+              {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+          </div>
         </header>
+
         <main className={styles.main}>
           <div className={styles.searchContainer}>
             <div className={styles.searchWrapper}>
@@ -49,13 +77,13 @@ export default function Main() {
               <Search size={18} className={styles.searchIcon} />
               <input
                 type="text"
-                value={serachText}
+                value={searchText}
                 placeholder="Search for books..."
                 className={styles.searchInput}
                 onChange={(e) => setSearchText(e.target.value)}
               />
               {/* Conditionally render the Clear (Cross) icon if there is text */}
-              {serachText && (
+              {searchText && (
                 <XCircle
                   size={18}
                   className={styles.clearIcon}
@@ -73,12 +101,21 @@ export default function Main() {
             Favorites
           </Link>
         </main>
+
         <div className="main">
-          {Object.keys(book).length === 0 ? (
-            <Loading />
+          {isLoading ? (
+            <>
+              <BookSkeleton />
+              <BookSkeleton />
+              <BookSkeleton />
+              <BookSkeleton />
+              <BookSkeleton />
+              <BookSkeleton />
+              <BookSkeleton />
+              <BookSkeleton />
+            </>
           ) : (
-            book.items &&
-            book.items.map((ele) => (
+            book.items?.map((ele) => (
               <Book
                 title={ele.volumeInfo?.title}
                 subTitle={ele.volumeInfo?.subtitle}
@@ -88,14 +125,15 @@ export default function Main() {
                 link={ele.volumeInfo?.previewLink}
                 key={ele.id}
                 ele={ele}
-                thumb={ele.volumeInfo.imageLinks.thumbnail}
+                thumb={ele.volumeInfo.imageLinks?.thumbnail}
               />
             ))
           )}
         </div>
+
         <div className="fav">
-          <h1 className="txt-d"> Contributed Books </h1>
-          <div className="main ">
+          <h1 className="txt-d">Contributed Books</h1>
+          <div className="main">
             {bookStore.map((ele) => (
               <Book
                 title={ele.title}

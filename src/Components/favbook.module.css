@@ -1,20 +1,31 @@
 .container {
-    background-color:rgb(29, 59, 90);
+    background-color: rgb(29, 59, 90);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: 'Arial', sans-serif;
-  }
-  
-  .header {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark {
+    background-color: #1a202c;
+    color: #e2e8f0;
+}
+
+.header {
     background-color: #1e3a8a;
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .backButton {
+    transition: background-color 0.3s ease;
+}
+
+.dark .header {
+    background-color: #2d3748;
+}
+
+.backButton {
     width: fit-content;
     height: fit-content;
     color: #ffffff;
@@ -24,7 +35,7 @@
     border-width: 0;
     font-size: 100%;
     line-height: 1.15;
-    font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
     margin: 12px 0 0;
     transition: background-color 0.2s;
     display: flex;
@@ -32,15 +43,48 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    background-color: #405cf5;
-    border-radius: 6px; 
-  }
-  
-  .backButton:hover {
+    background-color:#1e3a8a;
+    border-radius: 6px;
+}
+
+.backButton:hover {
     background-color: rgba(48, 158, 237, 0.803);
-  }
-  
-  .title {
+}
+
+.dark .backButton{
+  background-color: #2d3748;
+}
+
+.dark .backButton:hover{
+  background-color: #4a5568;
+}
+
+.darkModeButton {
+  background: none;
+  border: 0px solid white;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.darkModeButton:hover {
+  background-color: #17327b;
+  transform: scale(1.09);
+}
+
+.dark .darkModeButton {
+  color: white;
+}
+
+.dark .darkModeButton:hover{
+  background-color: #4a5568;
+  transform: scale(1.05);
+}
+
+
+.title {
     color: #ffffff;
     font-size: 1.5rem;
     font-weight: bold;
@@ -49,27 +93,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .heartIcon {
+}
+
+.heartIcon {
     margin-left: 0.5rem;
     font-size: 1.2rem;
-  }
-  
-  .main {
+}
+
+.main {
     flex-grow: 1;
     padding: 2rem;
-  }
-  
-  .bookList {
+}
+
+.bookList {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: grid;
     gap: 1rem;
-  }
-  
-  .bookItem {
+}
+
+.bookItem {
     background-color: #ffffff;
     border-radius: 0.5rem;
     padding: 1.5rem;
@@ -77,74 +121,53 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-  }
-  
-  .bookInfo {
-    flex-grow: 1;
-  }
-  
-  .bookTitle {
+}
+
+.dark .bookItem {
+    background-color: #2d3748;
+    color: #e2e8f0;
+}
+
+.bookTitle {
     font-size: 1.25rem;
     font-weight: bold;
     margin: 0 0 0.5rem 0;
     color: #1e3a8a;
-  }
-  
-  .bookAuthor {
+}
+
+.dark .bookTitle {
+    color: #90cdf4;
+}
+
+.bookAuthor {
     font-size: 0.875rem;
     color: #64748b;
     margin: 0;
-  }
-  
-  .bookActions {
+}
+
+.dark .bookAuthor {
+    color: #a0aec0;
+}
+
+.bookActions {
     display: flex;
     gap: 0.5rem;
-  }
-  
-  .readButton,
-  .removeButton {
-    width: fit-content;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 0.25rem;
-    font-size: 0.875rem;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    transition: background-color 0.2s;
-  }
-  
-  .readButton {
+}
+
+.readButton {
     background-color: #3b82f6;
     color: #ffffff;
-  }
-  
-  .readButton:hover {
+}
+
+.readButton:hover {
     background-color: #2563eb;
-  }
-  
-  .removeButton {
+}
+
+.removeButton {
     background-color: #f0f4f8;
     color: #ef4444;
-  }
-  
-  .removeButton:hover {
+}
+
+.removeButton:hover {
     background-color: #fee2e2;
-  }
-  
-  @media (min-width: 640px) {
-    .bookList {
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-  
-    .bookItem {
-      flex-direction: row;
-    }
-  
-    .bookActions {
-      flex-direction: column;
-    }
-  }
+}
