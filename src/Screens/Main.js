@@ -5,12 +5,14 @@ import styles from "./BookStore.module.css";
 import { Search, Heart, Sun, Moon } from "lucide-react";
 import Loading from "../Components/LoadingSpinner";
 import bookStore from "../bookStore";
+import BookSkeleton from "../Components/skeletons/BookSkeleton";
 
 export default function Main() {
   const [book, setBook] = useState([]);
   const [search, setSearch] = useState("India");
   const [text, setText] = useState("");
   const [darkMode, setDarkMode] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Use localStorage to persist dark mode setting across sessions
   useEffect(() => {
@@ -34,11 +36,12 @@ export default function Main() {
       )
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           setBook(data);
+          setIsLoading(false);
         });
     } catch (error) {
-      console.log(error);
+      setIsLoading(false);
+      console.log(error?.message || error);
     }
   }, [search]);
 
@@ -65,6 +68,7 @@ export default function Main() {
             </button>
           </div>
         </header>
+
         <main className={styles.main}>
           <form className={styles.searchContainer} onSubmit={handleSearch}>
             <input
@@ -87,10 +91,21 @@ export default function Main() {
             Favorites
           </Link>
         </main>
+
         <div className="main">
-          {Object.keys(book).length === 0 ? (
-            <Loading />
+          {isLoading || Object.keys(book).length === 0 ? (
+            <>
+              <BookSkeleton />
+              <BookSkeleton />
+              <BookSkeleton />
+              <BookSkeleton />
+              <BookSkeleton />
+              <BookSkeleton />
+              <BookSkeleton />
+              <BookSkeleton />
+            </>
           ) : (
+            // <Loading />
             book.items &&
             book.items.map((ele) => (
               <Book
@@ -107,6 +122,7 @@ export default function Main() {
             ))
           )}
         </div>
+
         <div className="fav">
           <h1 className="txt-d"> Contributed Books </h1>
           <div className="main ">
@@ -129,4 +145,3 @@ export default function Main() {
     </>
   );
 }
-
