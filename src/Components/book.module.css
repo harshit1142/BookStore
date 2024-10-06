@@ -12,11 +12,15 @@
 }
 
 .bookImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 60%;
   width: 100%;
   object-fit: cover; /* Ensures the image covers the designated area */
   transition: filter 0.3s ease; /* Smooth transition when hovering */
 }
+
 
 .bookInfo {
   padding: 1rem;
