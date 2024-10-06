@@ -5,16 +5,18 @@ import styles from "./BookStore.module.css";
 import { Search, Heart, XCircle } from "lucide-react";
 import Loading from "../Components/LoadingSpinner";
 import bookStore from "../bookStore";
+import { useDebounce } from "use-debounce";
 
 export default function Main() {
   const [book, setBook] = useState([]);
-  const [search, setSearch] = useState("India");
-  const [text, setText] = useState("");
-
+  ///const [search, setSearch] = useState("India");
+  const [serachText, setSearchText] = useState("");
+  const [debouncedText] = useDebounce(serachText, 200); // Debouncing with a 200ms delay, [adjustable based on requiremens]
   useMemo(() => {
+    const query = debouncedText.trim() === "" ? "India" : debouncedText; // If the search query is empty, don't fetch
     try {
       fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${search}&download=epub&key=AIzaSyD_d_29Zq6n63LUjWQMIJvVFY2QI7Rwb4E`
+        `https://www.googleapis.com/books/v1/volumes?q=${query}&download=epub&key=AIzaSyD_d_29Zq6n63LUjWQMIJvVFY2QI7Rwb4E`
       )
         .then((res) => res.json())
         .then((data) => {
@@ -24,12 +26,13 @@ export default function Main() {
     } catch (error) {
       console.log(error);
     }
-  }, [search]);
+  }, [debouncedText]);
 
   // Function to clear the input when the cross icon is clicked
   const clearSearch = () => {
-    setText(""); // Clears the search text
+    setSearchText(""); // Clears the search text
   };
+
   return (
     <>
       <div className={styles.container}>
@@ -46,13 +49,13 @@ export default function Main() {
               <Search size={18} className={styles.searchIcon} />
               <input
                 type="text"
-                value={text}
+                value={serachText}
                 placeholder="Search for books..."
                 className={styles.searchInput}
-                onChange={(e) => setText(e.target.value)}
+                onChange={(e) => setSearchText(e.target.value)}
               />
               {/* Conditionally render the Clear (Cross) icon if there is text */}
-              {text && (
+              {serachText && (
                 <XCircle
                   size={18}
                   className={styles.clearIcon}
