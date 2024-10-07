@@ -1,0 +1,34 @@
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .back-to-top-button {
+    background-color: #007bff; /* Circle background color */
+    color: white; /* Arrow color */
+    border: none;
+    border-radius: 50%; /* Make the button circular */
+    width: 50px; /* Circle width */
+    height: 50px; /* Circle height */
+    display: flex;
+    align-items: center; /* Center arrow vertically */
+    justify-content: center; /* Center arrow horizontally */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-to-top-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Arrow styles */
+  .arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent; /* Left side of arrow */
+    border-right: 10px solid transparent; /* Right side of arrow */
+    border-bottom: 15px solid white; /* Bottom side of arrow */
+  }
+  
