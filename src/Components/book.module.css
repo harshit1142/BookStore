@@ -1,140 +1,135 @@
-.bookCard {
-  background-color: #16213e;
-  border-radius: 12px;
+.card {
+  width: 230px;
+  border-radius: 20px;
+  background: #1b233d;
+  padding: 5px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 2px 2px 7px #1b233d;
+}
+
+/* .topSection {
+  height: 150px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
-  height: 450px;
-  width: 300px;
+  background: linear-gradient(45deg, rgb(4, 159, 187) 0%, rgb(80, 246, 255) 100%);
   position: relative;
-  box-sizing: border-box; /* Ensure padding doesn't affect width */
-}
-
-.bookImg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60%;
+} */
+.topSection {
+  position: relative;
   width: 100%;
-  object-fit: cover; /* Ensures the image covers the designated area */
-  transition: filter 0.3s ease; /* Smooth transition when hovering */
+  height: 200px;
+  overflow: hidden;
 }
 
-
-.bookInfo {
-  padding: 1rem;
-  background-color: #16213e;
-  text-align: left;
-  z-index: 1;
-  flex-grow: 1;
-  transition: filter 0.3s ease;
+.topSection img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
 }
 
-.bookCard:hover .bookImg,
-.bookCard:hover .bookInfo {
-  filter: blur(3px); /* Blur the image and the info section on hover */
+.border {
+  border-bottom-right-radius: 10px;
+  height: 30px;
+  width: 130px;
+  background: #1b233d;
+  position: relative;
+  transform: skew(-40deg);
+  box-shadow: -10px -10px 0 0 #1b233d;
 }
 
-.bookCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(233, 69, 96, 0.2);
+.border::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: -15px;
+  border-top-left-radius: 10px;
+  box-shadow: -5px -5px 0 2px #1b233d;
 }
 
-/* Title styling - Center the title */
-.title {
-  font-size: 1.4rem;
-  margin: 0 0 0.5rem 0;
-  color: #e94560;
-  font-weight: bold;
-  text-align: center; /* Centers the title */
-}
-
-/* Rest of the information positioning */
-.author {
-  font-size: 1rem;
-  color: #e0e0e0;
-  margin-top: 0.5rem;
-  text-align: right; /* Author on the right */
-}
-
-.bookDetails {
+.icons {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 30px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 0.5rem;
 }
 
-.date {
-  font-size: 0.9rem;
-  color: #a0a0a0;
+.logo {
+  height: 100%;
+  aspect-ratio: 1;
+  padding: 7px 0 7px 15px;
 }
 
-.rating {
-  display: flex;
-  align-items: center;
-}
-
-.ratingText {
-  font-size: 0.9rem;
-  color: #a0a0a0;
-  margin-right: 0.5rem;
-}
-
-.ratingValue {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #e94560;
-}
-
-/* Buttons section */
-.buttonContainer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  gap: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 2; /* Ensure buttons appear above everything else */
-}
-
-.bookCard:hover .buttonContainer {
-  opacity: 1;
-}
-
-.button {
-  padding: 0.75rem 1rem;
-  border: none;
-  border-radius: 6px;
-  background-color: #e94560;
-  color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+.socialMedia {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3; /* Buttons are on top, not blurred */
+  height: 100%; 
+  width: 100%; 
+  gap: 10px; 
+  margin: 0 auto; 
+  text-align: center;
 }
 
-.favButton {
-  background-color: #e94560;
+
+.svg {
+  height: 100%;
+  fill: #f1f4ff;
 }
 
-.readButton {
-  background-color: #533483;
+.svg:hover {
+  fill: white;
 }
 
-.button:hover {
-  transform: scale(1.05);
-  background-color: #ffffff;
-  color: #e94560;
+.bottomSection {
+  margin-top: 15px;
+  padding: 10px 5px;
 }
 
-.buttonIcon {
-  margin-right: 0.5rem;
-  font-size: 1.4rem;
+.title {
+  display: block;
+  font-size: 17px;
+  font-weight: bolder;
+  color: white;
+  text-align: center;
+  letter-spacing: 0px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.item {
+  flex: 30%;
+  text-align: center;
+  padding: 5px;
+  color: rgba(170, 222, 243, 0.721);
+}
+
+.bigText {
+  font-size: 12px;
+  display: block;
+}
+
+.regularText {
+  font-size: 9px;
+}
+
+.item:nth-child(2) {
+  border-left: 1px solid rgba(255, 255, 255, 0.126);
+  border-right: 1px solid rgba(255, 255, 255, 0.126);
 }
