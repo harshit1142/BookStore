@@ -19,8 +19,25 @@ function Book({
 
   const handleFavClick = () => {
     Fav(ele);
-    notify();
+
     setIsFavorited(!isFavorited); // Toggle the favorite state
+    // Get the current favorites from localStorage or set an empty array if none exist
+    let currentFavs = JSON.parse(localStorage.getItem("favorites") || "[]");
+
+    const isAlreadyFavorited = currentFavs.some((fav) => fav.id === ele.id);
+
+    if (isAlreadyFavorited) {
+      toast.error(`${title} already added to favorites`);
+      return;
+    }
+
+    // Add the new element to the array
+    currentFavs.push(ele);
+
+    // Save the updated array back to localStorage
+    localStorage.setItem("favorites", JSON.stringify(currentFavs));
+
+    notify();
   };
 
   const notify = () => toast.success(`${title} added to favorites`);
@@ -33,7 +50,12 @@ function Book({
           <img src={`${thumb}`} alt="" />
           <div className={styles.icons}>
             <div className={styles.logo}>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 94 94" className={styles.svg}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 94 94"
+                className={styles.svg}
+              >
                 <path fill="white" d="M38.0481 4.82927..."></path>
                 <path fill="white" d="M86.9 61.8682..."></path>
                 <path fill="white" d="M2.86102e-06 83.2195..."></path>
@@ -63,10 +85,7 @@ function Book({
           <div className={styles.row}>
             <div className={styles.item}>
               <span className={styles.bigText}>Favourite</span>
-              <span
-                className={styles.socialMedia}
-                onClick={handleFavClick}
-              >
+              <span className={styles.socialMedia} onClick={handleFavClick}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -81,11 +100,7 @@ function Book({
             <div className={styles.item}>
               <span className={styles.bigText}>Read</span>
               <span className={styles.socialMedia}>
-                <a
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href={link} target="_blank" rel="noopener noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"

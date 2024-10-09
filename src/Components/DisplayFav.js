@@ -5,9 +5,10 @@ import { useNavigate } from "react-router-dom";
 import styles from "./favbook.module.css";
 import { ArrowLeft, Sun, Moon } from "lucide-react";
 
-function DisplayFav({ Fav }) {
+function DisplayFav() {
   const navigate = useNavigate();
   const [darkMode, setDarkMode] = useState(false);
+  const [Fav, setFav] = useState([]);
 
   // Use localStorage to persist dark mode setting across sessions
   useEffect(() => {
@@ -19,6 +20,11 @@ function DisplayFav({ Fav }) {
     localStorage.setItem("darkModeFav", darkMode);
   }, [darkMode]);
 
+  useEffect(() => {
+    const storedFavs = JSON.parse(localStorage.getItem("favorites") || "[]");
+    setFav(storedFavs);
+  }, []);
+
   // Toggle dark mode on and off
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -28,7 +34,10 @@ function DisplayFav({ Fav }) {
     <>
       <div className={`${styles.container} ${darkMode ? styles.dark : ""}`}>
         <header className={styles.header}>
-          <button className={` ${styles.backButton} `} onClick={() => navigate("/")}>
+          <button
+            className={` ${styles.backButton} `}
+            onClick={() => navigate("/")}
+          >
             <ArrowLeft size={20} />
             {/* <span className="sr-only">Back</span> */}
           </button>
