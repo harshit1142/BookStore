@@ -106,4 +106,15 @@ export default [
       "https://openlibrary.org/works/OL21640039W/The_Psychology_of_Money#starRatingSection",
     thumnail: "https://covers.openlibrary.org/b/id/14820511-L.jpg",
   },
+  {
+    id: "11",
+    title: "5 point Someone",
+    subTitle: "",
+    authors: ["Chetan Bhagat"],
+    publishedDate: "May 01, 2004",
+    averageRating: "4.4",
+    previewLink:
+      "https://www.goodreads.com/book/show/105576.Five_Point_Someone",
+    thumnail: "https://covers.openlibrary.org/b/id/14820511-L.jpg",
+  },
 ];
