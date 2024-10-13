@@ -37,10 +37,8 @@ export default [
     authors: ["Bryan Lee O'Malley"],
     publishedDate: "14 August, 2004",
     averageRating: "4.8",
-    previewLink:
-      "https://archive.org/details/6-scott-pilgrim/1%23%20Scott%20Pilgrim%27s%20Precious%20Little%20Life/page/181/mode/2up",
-    thumnail:
-      "https://ia800504.us.archive.org/BookReader/BookReaderImages.php?zip=/11/items/6-scott-pilgrim/1%23%20Scott%20Pilgrim%27s%20Precious%20Little%20Life_jp2.zip&file=1%23%20Scott%20Pilgrim%27s%20Precious%20Little%20Life_jp2/1%23%20Scott%20Pilgrim%27s%20Precious%20Little%20Life_0000.jp2&id=6-scott-pilgrim&scale=8&rotate=0",
+    previewLink:"https://archive.org/details/6-scott-pilgrim/1%23%20Scott%20Pilgrim%27s%20Precious%20Little%20Life/page/181/mode/2up",
+    thumnail:"https://ia800504.us.archive.org/BookReader/BookReaderImages.php?zip=/11/items/6-scott-pilgrim/1%23%20Scott%20Pilgrim%27s%20Precious%20Little%20Life_jp2.zip&file=1%23%20Scott%20Pilgrim%27s%20Precious%20Little%20Life_jp2/1%23%20Scott%20Pilgrim%27s%20Precious%20Little%20Life_0000.jp2&id=6-scott-pilgrim&scale=8&rotate=0",
   },
   {
     id: "5",
@@ -102,8 +100,7 @@ export default [
     authors: ["Morgan Housel"],
     publishedDate: "Sep 08, 2020",
     averageRating: "4.0",
-    previewLink:
-      "https://openlibrary.org/works/OL21640039W/The_Psychology_of_Money#starRatingSection",
+    previewLink:"https://openlibrary.org/works/OL21640039W/The_Psychology_of_Money#starRatingSection",
     thumnail: "https://covers.openlibrary.org/b/id/14820511-L.jpg",
   },
 ];
