@@ -83,6 +83,34 @@
   text-align: center;
 }
 
+.svgg{
+  fill:#ffffff;
+}
+
+.clickfav{
+  fill: #a3bbff;
+}
+
+.svggread{
+  fill:#ffffff;
+}
+
+.svggread a:visited{
+  fill:#a3ffae;
+}
+.svggread a:visited{
+  fill: #a3ffae;
+}
+.svggread:hover{
+  transform: scale(1.09);
+  fill: #a3ffae;
+}
+
+.svgg:hover{
+  transform: scale(1.09);
+  fill: #a3bbff;
+}
+
 
 .svg {
   height: 100%;
