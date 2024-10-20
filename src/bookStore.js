@@ -125,4 +125,15 @@ export default [
       "https://www.goodreads.com/book/show/105576.Five_Point_Someone",
     thumnail: "https://covers.openlibrary.org/b/id/14820511-L.jpg",
   },
+  {
+    id: "13",
+    title: "How not to talk with Batsman",
+    subTitle: "",
+    authors: ["Bhasker"],
+    publishedDate: "April 2024",
+    averageRating: "00.1",
+    previewLink:
+      "https://www.goodreads.com/book/show/105576.Five_Point_Someone",
+    thumnail: "https://covers.openlibrary.org/b/id/14820511-L.jpg",
+  },
 ];
