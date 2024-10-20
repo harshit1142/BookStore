@@ -136,4 +136,15 @@ export default [
       "https://www.goodreads.com/book/show/105576.Five_Point_Someone",
     thumnail: "https://covers.openlibrary.org/b/id/14820511-L.jpg",
   },
+  {
+    id: "14",
+    title: "Billionaires ?",
+    subTitle: "",
+    authors: ["Aniket"],
+    publishedDate: "April 2024",
+    averageRating: "06.00",
+    previewLink:
+      "https://www.goodreads.com/book/show/105576.Five_Point_Someone",
+    thumnail: "https://covers.openlibrary.org/b/id/14820511-L.jpg",
+  },
 ];
