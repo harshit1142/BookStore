@@ -147,4 +147,15 @@ export default [
       "https://www.goodreads.com/book/show/105576.Five_Point_Someone",
     thumnail: "https://covers.openlibrary.org/b/id/14820511-L.jpg",
   },
+  {
+    "id": "15",
+    "title": "The Millionaire Next Door",
+    "subTitle": "The Surprising Secrets of America's Wealthy",
+    "authors": ["Thomas J. Stanley"],
+    "publishedDate": "October 1995",
+    "averageRating": "4.05",
+    "previewLink": "https://www.goodreads.com/book/show/998.The_Millionaire_Next_Door?from_search=true&from_srp=true&qid=NMcPcWzkN1&rank=1",
+    "thumbnail": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348313018i/998.jpg"
+}
+
 ];
