@@ -71,6 +71,15 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "aditya-singh2005",
+      "name": "Aditya Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/154593114?s=400&v=4",
+      "profile": "https://github.com/aditya-singh2005",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
