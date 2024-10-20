@@ -147,4 +147,37 @@ export default [
       "https://www.goodreads.com/book/show/105576.Five_Point_Someone",
     thumnail: "https://covers.openlibrary.org/b/id/14820511-L.jpg",
   },
+  {
+    id: "15",
+    title: "The Shadow of the Wind",
+    subTitle: "",
+    authors: ["Carlos Ruiz Zafón"],
+    publishedDate: "January 2001",
+    averageRating: "04.30",
+    previewLink:
+      "https://www.goodreads.com/book/show/1232.The_Shadow_of_the_Wind?from_search=true&from_srp=true&qid=MHuZkbIzXe&rank=1",
+    thumnail: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1628791882i/1232.jpg",
+  },
+  {
+    id: "16",
+    title: "Tudo é Rio",
+    subTitle: "",
+    authors: ["Carla Madeira"],
+    publishedDate: "January 2014",
+    averageRating: "04.25",
+    previewLink:
+      "https://www.goodreads.com/book/show/41734693-tudo-rio?from_search=true&from_srp=true&qid=NY4szTCt9Y&rank=1",
+    thumnail: "https://img.travessa.com.br/livro/GR/7c/7c915f39-5306-4382-aae8-5750af26951c.jpg",
+  },
+  {
+    id: "17",
+    title: "You Had Me At Hello",
+    subTitle: "",
+    authors: ["Mhairi McFarlane"],
+    publishedDate: "November 2012",
+    averageRating: "03.79",
+    previewLink:
+      "https://www.goodreads.com/book/show/15733851-you-had-me-at-hello?from_search=true&from_srp=true&qid=CtiH9qORjF&rank=1",
+    thumnail: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348787624i/15733851.jpg",
+  },
 ];
