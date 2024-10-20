@@ -114,4 +114,15 @@ export default [
       "https://www.goodreads.com/book/show/105576.Five_Point_Someone",
     thumnail: "https://covers.openlibrary.org/b/id/14820511-L.jpg",
   },
+  {
+    id: "12",
+    title: "How to talk with Sora",
+    subTitle: "",
+    authors: ["Prem"],
+    publishedDate: "October 2023",
+    averageRating: "10.0",
+    previewLink:
+      "https://www.goodreads.com/book/show/105576.Five_Point_Someone",
+    thumnail: "https://covers.openlibrary.org/b/id/14820511-L.jpg",
+  },
 ];
